@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Forms.StealReportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/TitleTextView_InForms"
+                    android:text="اطلاعات سرقت" />
+
+                <TableRow android:layout_margin="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/et_date_steal" />
+
+                    <EditText
+                        android:id="@+id/et_date_steal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:hint="@string/et_date_steal" />
+                </TableRow>
+
+                <TableRow android:layout_margin="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/et_code_eshterak" />
+
+                    <com.hootsuite.nachos.NachoTextView
+                        android:id="@+id/et_code_eshterak"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/et_code_eshterak"
+                        app:chipHeight="30dp"
+                        app:chipSpacing="2dp"
+                        app:chipTextSize="16dp" />
+                </TableRow>
+
+                <TableRow android:layout_margin="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/tv_stealType" />
+
+                    <EditText
+                        android:id="@+id/et_steal_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:hint="@string/tv_stealType" />
+
+                    <!--<FrameLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="#eee"-->
+                    <!--android:padding="4dp">-->
+
+                    <!--<Spinner-->
+                    <!--android:id="@+id/sp_steal_type"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:focusableInTouchMode="false" />-->
+                    <!--</FrameLayout>-->
+                </TableRow>
+
+                <TableRow android:layout_margin="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/tv_description" />
+
+                    <EditText
+                        android:id="@+id/et_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/tv_description"
+                        android:inputType="text" />
+                </TableRow>
+
+                <LinearLayout
+                    android:id="@+id/cameraLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="#eee"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    android:visibility="visible">
+
+                    <ImageButton
+                        android:id="@+id/cameraBtn"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@android:drawable/ic_menu_camera"
+                        android:tint="#000"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:text="اضافه کردن تصویر" />
+                </LinearLayout>
+
+                <GridView
+                    android:id="@+id/gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:numColumns="auto_fit"
+                    android:scrollbars="horizontal"
+                    android:stretchMode="spacingWidthUniform" />
+            </TableLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/solve_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TitleTextView_InForms"
+                    android:background="@color/nav_blue"
+                    android:text="رفع" />
+
+                <EditText
+                    android:id="@+id/et_solve_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:focusable="false"
+                    android:hint="@string/et_solve_date" />
+
+                <EditText
+                    android:id="@+id/et_solve_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:hint="@string/tv_description" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/submit_report_btn"
+            style="@style/ModernButton"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/btn_mission_report_submit" />
+    </LinearLayout>
+</ScrollView>

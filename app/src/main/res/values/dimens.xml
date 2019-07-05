@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="fab_margin">12dp</dimen>
+    <dimen name="search_view_inset">8dp</dimen>
+    <dimen name="text_size_medium">14dp</dimen>
+    <dimen name="activity_vertical_margin">8dp</dimen>
+    <dimen name="text_size_big">20dp</dimen>
+    <!--<dimen name="fab_shadow_offset">0dp</dimen>-->
+    <!--<dimen name="fab_shadow_radius">0dp</dimen>-->
+</resources>

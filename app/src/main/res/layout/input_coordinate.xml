@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/input_coordinate_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:id="@+id/inputX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="X"
+            android:imeOptions="actionDone"
+            android:inputType="number|numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:id="@+id/inputY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Y"
+            android:imeOptions="actionDone"
+            android:inputType="number|numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>

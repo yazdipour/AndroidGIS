@@ -1,0 +1,72 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="editTextStyle">@style/GlobalEditText</item>
+        <item name="android:textDirection">rtl</item>
+        <item name="android:layoutDirection">rtl</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="android:textDirection">rtl</item>
+        <item name="android:layoutDirection">rtl</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@color/black</item>
+    </style>
+
+    <style name="GlobalEditText" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textAlignment">center</item>
+        <item name="android:ellipsize">start</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="report_title">
+
+    </style>
+
+    <style name="fab_labels_style">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CustomFloatingSearchViewTheme" parent="AppTheme">
+        <item name="editTextStyle">@style/searchViewEditTextStyle</item>
+        <item name="android:divider">#c9c9c9</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="colorControlNormal">#696969</item>
+    </style>
+    <!-- your custom search view text style -->
+    <style name="searchViewEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:imeOptions">actionSearch</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ModernButton" parent="@style/Widget.AppCompat.Button.Colored" />
+
+    <style name="ModernBorderlessButton" parent="@style/Widget.AppCompat.Button.Borderless.Colored" />
+
+    <style name="TitleTextView_InForms">
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#333333</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

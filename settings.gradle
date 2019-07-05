@@ -1,0 +1,6 @@
+include ':app',
+        ':spatilite_driver',
+        ':editormodule',
+        ':maplib',
+        ':maplibui',
+        ':vtmintegration'

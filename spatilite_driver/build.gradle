@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion sdkVer
+
+    defaultConfig {
+        minSdkVersion minSdkVer
+        targetSdkVersion sdkVer
+        versionCode 1
+        versionName "1.0"
+
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        ndk {
+            abiFilters "armeabi-v7a", "x86", "armeabi"
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}

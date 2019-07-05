@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Project:  NextGIS Mobile
+  ~ Purpose:  Mobile GIS for Android.
+  ~ Author:   Stanislav Petriakov, becomeglory@gmail.com
+  ~ ******************************************************************************
+  ~ Copyright (c) 2016 NextGIS, info@nextgis.com
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Lesser Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU Lesser Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Lesser Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <Button
+        android:id="@+id/default_style"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/default_style"/>
+
+    <TextView
+        android:layout_width='match_parent'
+        android:layout_height='wrap_content'
+        android:gravity="center_vertical"
+        android:text="@string/field_name"
+        android:textAppearance='?android:attr/textAppearanceMedium'/>
+
+    <Spinner
+        android:id="@+id/field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width='match_parent'
+            android:layout_height='48dp'
+            android:gravity="center_vertical"
+            android:text="@string/rules"/>
+
+        <Button
+            android:id="@+id/new_rule"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/new_tms"/>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/rules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

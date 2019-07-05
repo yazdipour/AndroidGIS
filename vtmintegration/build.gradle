@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion sdkVer
+    defaultConfig {
+        minSdkVersion minSdkVer
+        targetSdkVersion sdkVer
+        versionCode 1
+        versionName "1.0"
+
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':spatilite_driver')
+    implementation "com.android.support:multidex:${multidex}"
+//    implementation "com.android.support:appcompat-v7:${supVer}"
+
+    implementation "org.mapsforge:vtm-android:${mapsforgeVTMVersion}"
+    implementation "org.mapsforge:vtm-android:${mapsforgeVTMVersion}:natives-arm64-v8a"
+    implementation "org.mapsforge:vtm-android:${mapsforgeVTMVersion}:natives-armeabi"
+    implementation "org.mapsforge:vtm-android:${mapsforgeVTMVersion}:natives-armeabi-v7a"
+    implementation "org.mapsforge:vtm-android:${mapsforgeVTMVersion}:natives-mips"
+    implementation "org.mapsforge:vtm-android:${mapsforgeVTMVersion}:natives-mips64"
+    implementation "org.mapsforge:vtm-android:${mapsforgeVTMVersion}:natives-x86"
+    implementation "org.mapsforge:vtm-android:${mapsforgeVTMVersion}:natives-x86_64"
+    implementation "org.mapsforge:vtm-jts:${mapsforgeVTMVersion}"
+    implementation "org.mapsforge:vtm-themes:${mapsforgeVTMVersion}"
+    //for random color
+    implementation 'com.github.lzyzsd.randomcolor:library:1.0.0'
+
+    //jackson
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jackson}"
+    implementation "com.fasterxml.jackson.core:jackson-core:${jackson}"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:${jackson}"
+}

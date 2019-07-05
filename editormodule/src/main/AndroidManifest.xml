@@ -1,0 +1,47 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.nexgis.editor">
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application>
+        <activity
+            android:name=".activity.EditActivity"
+            android:label="ویرایش" />
+
+        <activity
+            android:name=".activity.CreateVectorLayerActivity"
+            android:label="@string/ngw_account_add"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/ngw_accounts"/>
+
+        <!--<service-->
+        <!--android:name="com.nextgis.maplibui.account.NGWAuthenticatorService"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="true">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.accounts.AccountAuthenticator" />-->
+        <!--</intent-filter>-->
+
+        <!--<meta-data-->
+        <!--android:name="android.accounts.AccountAuthenticator"-->
+        <!--android:resource="@xml/authenticator" />-->
+        <!--</service>-->
+
+        <provider
+            android:name="com.nextgis.maplib.datasource.LayerContentProvider"
+            android:authorities="com.nextgis.mobile.provider"
+            android:exported="false"
+            android:syncable="true" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.easypicker.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+</manifest>

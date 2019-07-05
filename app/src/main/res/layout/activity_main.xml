@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    tools:context=".Activities.MainActivity">
+
+    <org.oscim.android.MapView
+        android:id="@+id/mapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <TextView
+        android:id="@+id/tv_coordinate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:textColor="@color/black" />
+
+    <ir.gfpishro.geosuiteandroidprivateusers.Controls.ProgressRingControl
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_navigation"
+            style="@style/ModernButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/blue_rounded_button"
+            android:backgroundTint="@color/nav_blue"
+            android:drawableStart="@drawable/abc_ic_clear_mtrl_alpha"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/btn_close_nav"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/fab_rotate"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="bottom|center_horizontal|center|start"
+            android:layout_margin="12dp"
+            android:background="@drawable/round_btn"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/direction"
+            tools:ignore="ContentDescription" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_vertical|center|start"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_my_location_black_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ir.gfpishro.geosuiteandroidprivateusers.Controls.MissionCardControl
+            android:id="@+id/card_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.andremion.counterfab.CounterFab
+            android:id="@+id/fab_mission"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:src="@drawable/ic_ersal_sarshift"
+            android:tint="@color/button_text_color"
+            app:backgroundTint="@color/timepicker_toolbar_bg" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_search_white_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_ruler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_ruler"
+            tools:ignore="VectorDrawableCompat" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_coordinate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@drawable/map_marker_white"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="8dp"
+        app:fab_addButtonColorNormal="@color/colorPrimary"
+        app:fab_addButtonColorPressed="@color/colorPrimaryDark"
+        app:fab_addButtonSize="normal"
+        app:fab_expandDirection="down"
+        app:fab_labelStyle="@style/fab_labels_style">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorAccent"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_icon="@drawable/ic_settings_black_24dp"
+            app:fab_size="mini"
+            app:fab_title="@string/fab_settings" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorAccent"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_icon="@drawable/qr_code"
+            app:fab_size="mini"
+            app:fab_title="@string/fab_barcode" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorAccent"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_icon="@drawable/ic_edit_black_24dp"
+            app:fab_size="mini"
+            app:fab_title="@string/fab_edit" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_layers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorAccent"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_icon="@drawable/ic_layers_white_24dp"
+            app:fab_title="@string/fab_layers" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</FrameLayout>
+

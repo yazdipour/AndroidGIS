@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:layoutDirection="rtl"
+    app:cardCornerRadius="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:gravity="center_vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/tv3_marketing"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/et3"
+                    android:layout_width="120dp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/trow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:gravity="center_vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/tv1_marketing"
+                    android:textSize="18sp" />
+
+                <com.travijuu.numberpicker.library.NumberPicker
+                    android:id="@+id/np1"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    app:focusable="true"
+                    app:min="1" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/trow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:gravity="center_vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/tv2_marketing"
+                    android:textSize="18sp" />
+
+                <com.travijuu.numberpicker.library.NumberPicker
+                    android:id="@+id/np2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    app:focusable="true"
+                    app:min="1" />
+            </TableRow>
+        </TableLayout>
+
+        <ImageButton
+            android:id="@+id/ib_rm"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:background="@color/red_btn_bg_color"
+            android:src="@drawable/ic_delete_forever_black_24dp"
+            android:tint="@color/white"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

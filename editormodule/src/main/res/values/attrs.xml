@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Project:  NextGIS Mobile
+  ~ Purpose:  Mobile GIS for Android.
+  ~ Author:   Dmitry Baryshnikov (aka Bishop), bishop.dev@gmail.com
+  ~ Author:   NikitaFeodonit, nfeodonit@yandex.com
+  ~ Author:   Stanislav Petriakov, becomeglory@gmail.com
+  ~ ******************************************************************************
+  ~ Copyright (c) 2012-2015. NextGIS, info@nextgis.com
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+    <bool name="isTablet">false</bool>
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorPressed"
+              format="color"/>
+        <attr name="fab_colorDisabled"
+              format="color"/>
+        <attr name="fab_colorNormal"
+              format="color"/>
+        <attr name="fab_icon"
+              format="reference"/>
+        <attr name="fab_size"
+              format="enum">
+            <enum name="normal"
+                  value="0"/>
+            <enum name="mini"
+                  value="1"/>
+        </attr>
+        <attr name="fab_title"
+              format="string"/>
+        <attr name="fab_stroke_visible"
+              format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="AddFloatingActionButton">
+        <attr name="fab_plusIconColor"
+              format="color"/>
+    </declare-styleable>
+    <declare-styleable name="FloatingActionsMenu">
+        <attr name="fab_addButtonColorPressed"
+              format="color"/>
+        <attr name="fab_addButtonColorNormal"
+              format="color"/>
+        <attr name="fab_addButtonSize"
+              format="enum">
+            <enum name="normal"
+                  value="0"/>
+            <enum name="mini"
+                  value="1"/>
+        </attr>
+        <attr name="fab_addButtonPlusIconColor"
+              format="color"/>
+        <attr name="fab_addButtonStrokeVisible"
+              format="boolean"/>
+        <attr name="fab_labelStyle"
+              format="reference"/>
+        <attr name="fab_expandDirection"
+              format="enum">
+            <enum name="up"
+                  value="0"/>
+            <enum name="down"
+                  value="1"/>
+            <enum name="left"
+                  value="2"/>
+            <enum name="right"
+                  value="3"/>
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,452 @@
+[
+  {
+    "control-type": "textview",
+    "id": 1,
+    "title": "تاریخ حادثه",
+    "ui-child-controls": [
+      {
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "control-type": "textview",
+    "id": 2,
+    "title": "پیام دهنده",
+    "ui-child-controls": [
+      {
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "control-type": "textview",
+    "id": 3,
+    "title": "زمان دریافت پیام",
+    "ui-child-controls": [
+      {
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 4,
+    "title": "منطقه/ناحیه",
+    "ui-child-controls": [
+      {
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "control-type": "textview",
+    "id": 5,
+    "title": "شهر",
+    "ui-child-controls": [
+      {
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 6,
+    "title": "روستا",
+    "ui-child-controls": [
+      {
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 7,
+    "title": "کد آدرس",
+    "ui-child-controls": [
+      {
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 8,
+    "title": "شماره اشتراک",
+    "ui-child-controls": [
+      {
+        "text": "...",
+        "required": false,
+        "is-number-field": true
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 9,
+    "title": "نام مشترک",
+    "ui-child-controls": [
+      {
+        "text": "...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 10,
+    "title": "تلفن تماس گیرنده",
+    "ui-child-controls": [
+      {
+        "text": "...",
+        "required": true,
+        "is-number-field": true
+      }
+    ]
+  },
+  {
+    "control-type": "textview",
+    "title": "نوع حادثه"
+  },
+  {
+    "control-type": "checkbox",
+    "id": 12,
+    "title": "خط توزیع",
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "خط توزیع",
+        "required": false
+      }
+    ]
+  },
+  {
+    "control-type": "radiobox",
+    "id": 39,
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "inch"
+      },
+      {
+        "checked": true,
+        "text": "cm"
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 13,
+    "ui-child-controls": [
+      {
+        "text": "قطر لوله",
+        "required": true,
+        "is-number-field": true,
+        "if-id-req": 12
+      }
+    ]
+  },
+  {
+    "control-type": "radiobox",
+    "id": 14,
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "فولادی",
+        "required": false
+      },
+      {
+        "checked": false,
+        "text": "PE",
+        "required": false
+      }
+    ]
+  },
+  {
+    "control-type": "checkbox",
+    "id": 16,
+    "title": "خط تغذیه",
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "خط تغذیه",
+        "required": false
+      }
+    ]
+  },
+  {
+    "control-type": "radiobox",
+    "id": 40,
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "inch"
+      },
+      {
+        "checked": true,
+        "text": "cm"
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 17,
+    "ui-child-controls": [
+      {
+        "text": "قطر لوله",
+        "required": true,
+        "if-id-req": 16,
+        "is-number-field": true
+      }
+    ]
+  },
+  {
+    "control-type": "radiobox",
+    "id": 18,
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "فولادی",
+        "required": false
+      },
+      {
+        "checked": false,
+        "text": "PE",
+        "required": false
+      }
+    ]
+  },
+  {
+    "control-type": "checkbox",
+    "id": 20,
+    "title": "انشعاب",
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "فولادی",
+        "required": false,
+        "if-id-not-req": 21
+      }
+    ]
+  },
+  {
+    "control-type": "checkbox",
+    "id": 21,
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "PE",
+        "required": false,
+        "if-id-not-req": 20
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 22,
+    "title": "ایستگاه",
+    "ui-child-controls": [
+      {
+        "text": "...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 23,
+    "title": "کنتور",
+    "ui-child-controls": [
+      {
+        "text": "...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 24,
+    "title": "رگلاتور",
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "...",
+        "required": true
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 25,
+    "title": "آتش سوزی",
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "...",
+        "required": false
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 26,
+    "title": "انفجار",
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "...",
+        "required": false
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 27,
+    "title": "نشتی داخلی",
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "...",
+        "required": false
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 28,
+    "title": "مسمومیت/گاز گرفتگی",
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "...",
+        "required": false
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 29,
+    "title": "سایر",
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "...",
+        "required": false
+      }
+    ]
+  },
+  {
+    "control-type": "radiobox",
+    "id": 30,
+    "title": "فوران گاز",
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "دارد",
+        "required": false
+      },
+      {
+        "checked": true,
+        "text": "ندارد",
+        "required": false
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 31,
+    "title": "تعداد قطع گاز",
+    "ui-child-controls": [
+      {
+        "text": "0",
+        "required": true,
+        "is-number-field": true
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 32,
+    "title": "سازمان خسارت زننده",
+    "ui-child-controls": [
+      {
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "control-type": "textview",
+    "title": "میزان خسارت وارده"
+  },
+  {
+    "control-type": "radiobox",
+    "id": 33,
+    "title": "مالی",
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "دارد",
+        "required": false
+      },
+      {
+        "checked": true,
+        "text": "ندارد"
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 34,
+    "ui-child-controls": [
+      {
+        "checked": true,
+        "text": "توضیحات"
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 35,
+    "title": "جانی",
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "تعداد مصدوم/مسموم",
+        "is-number-field": true
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 36,
+    "ui-child-controls": [
+      {
+        "checked": false,
+        "text": "تعداد فوتی",
+        "is-number-field": true
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 37,
+    "ui-child-controls": [
+      {
+        "checked": true,
+        "text": "توضیحات"
+      }
+    ]
+  },
+  {
+    "control-type": "edittext",
+    "id": 38,
+    "title": "شرح حادثه و خلاصه اقدامات انجام شده",
+    "ui-child-controls": [
+      {
+        "checked": true,
+        "text": "توضیحات",
+        "required": true
+      }
+    ]
+  }
+]

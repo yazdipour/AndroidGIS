@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">spatilite_driver</string>
+    <string name="select_dotdot">...</string>
+    <string name="installgpsstatus_title">install gps</string>
+    <string name="installgpsstatus_message">please install gps</string>
+    <string name="installamaze_title">installamaze_title</string>
+    <string name="installamaze_message">installamaze_message</string>
+    <string name="cantcreate_sdcard">cantcreate_sdcard</string>
+    <string name="http_ok_msg">ok</string>
+    <string name="http_forbidden_msg">http_forbidden_msg</string>
+    <string name="http_not_found_msg">http_not_found_msg</string>
+    <string name="http_not_implemented_code_msg">http_not_implemented_code_msg</string>
+    <string name="file_upload_completed_properly">file_upload_completed_properly</string>
+    <string name="post_completed_properly">post_completed_properly</string>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Project:  NextGIS Mobile
+  ~ Purpose:  Mobile GIS for Android.
+  ~ Author:   Dmitry Baryshnikov (aka Bishop), bishop.dev@gmail.com
+  ~ Author:   NikitaFeodonit, nfeodonit@yandex.com
+  ~ Author:   Stanislav Petriakov, becomeglory@gmail.com
+  ~ ******************************************************************************
+  ~ Copyright (c) 2012-2018 NextGIS, info@nextgis.com
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/status_panel_mode"
+        android:entryValues="@array/status_panel_mode_val"
+        android:key="show_status_panel"
+        android:title="@string/show_status_panel"/>
+
+    <ListPreference
+        android:defaultValue="3"
+        android:entries="@array/current_location_mode"
+        android:entryValues="@array/current_location_mode_val"
+        android:key="show_current_location"
+        android:title="@string/show_current_location"/>
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="map_show_compass"
+        android:title="@string/show_compass"/>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="keep_screen_on"
+        android:summary="@string/keep_screen_on_summary"
+        android:title="@string/keep_screen_on"/>
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="show_zoom_controls"
+        android:summary="@string/show_zoom_controls_summary"
+        android:title="@string/show_zoom_controls"/>
+
+    <ListPreference
+        android:defaultValue="metric"
+        android:dialogTitle="@string/preferred_units"
+        android:entries="@array/units"
+        android:entryValues="@array/units_val"
+        android:key="preferred_units"
+        android:title="@string/preferred_units"/>
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="show_scale_ruler"
+        android:title="@string/show_scale_ruler"/>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="show_zoom_level"
+        android:title="@string/show_zoom_level"/>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="show_ruler_measuring"
+        android:title="@string/show_ruler_measuring"/>
+
+    <ListPreference
+        android:defaultValue="0"
+        android:dialogTitle="@string/select_coordinates_format"
+        android:entries="@array/coordinates_format"
+        android:entryValues="@array/coordinates_format_val"
+        android:key="coordinates_format"
+        android:summary="@string/coordinates_format_summary"
+        android:title="@string/coordinates_format"/>
+
+    <editormodule.utils.IntEditTextPreference
+        android:defaultValue="6"
+        android:inputType="number"
+        android:key="coordinates_fraction_digits"
+        android:numeric="integer"
+        android:title="@string/coordinates_fraction_digits"/>
+
+    <ListPreference
+        android:defaultValue="neutral"
+        android:entries="@array/map_bg_entry"
+        android:entryValues="@array/map_bg_val"
+        android:key="map_bg"
+        android:title="@string/map_bg"/>
+    <!--bui/blob/master/src/main/res/values/arrays.xml#L107-->
+
+    <editormodule.utils.SelectMapPathPreference
+        android:key="map_path"
+        android:title="@string/map_path"
+        android:summary="@string/map_path_summary"/>
+</PreferenceScreen>

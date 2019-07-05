@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffc107</color>
+    <color name="colorPrimaryDark">#ffa000</color>
+    <color name="colorPrimaryDarkDark">#643f00</color>
+    <color name="colorAccent">#ff9800</color>
+    <color name="error">#e74c3c</color>
+    <color name="primary_light">#FFECB3</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#212121</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="white">#ffffff</color>
+    <color name="green">#2ecc71</color>
+    <color name="black">#111111</color>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="nav_green">#00cc33</color>
+    <color name="nav_blue">#4286F5</color>
+    <color name="midnight_blue">#2c3e50</color>
+    <color name="midnight_green">#006266</color>
+    <!-- Calculator  -->
+    <color name="mdtp_accent_color">@color/colorPrimary</color>
+    <color name="mdtp_accent_color_dark">@color/colorPrimaryDark</color>
+</resources>

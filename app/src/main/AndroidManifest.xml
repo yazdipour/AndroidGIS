@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ir.gfpishro.geosuiteandroidprivateusers">
+    <!-- ِDeveloper : Shahriar Yazdipour (https://yazdipour.github.io) -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Storage -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- PHONE -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.READ_SMS" /> <!-- Startup -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- CAMERA -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <application
+        android:name="editormodule.utils.MainApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:theme,android:label"
+        tools:targetApi="m">
+        <activity
+            android:name=".Forms.CustomerActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="مشترک"
+            android:parentActivityName=".Activities.SearchActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.SearchActivity" />
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.com.vansuita.pickimage.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+
+        <activity android:name=".Activities.InitActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="editormodule.activity.EditActivity"
+            android:label="ویرایش"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name="editormodule.activity.SettingsActivity"
+            android:label="@string/activity_title_settings"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.SearchActivity"
+            android:label="@string/activity_title_layer"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.LayersActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/activity_title_layer"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.SettingsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/activity_title_settings"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.MissionsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/activity_title_missions"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Forms.ReportActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/activity_title_report"
+            android:parentActivityName=".Activities.MissionsActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MissionsActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Activities.DownloaderActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_downloader"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Forms.MarketingActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/activity_title_marketing"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Forms.RiserActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/activity_title_riser"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.ScannerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.StealActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/activity_steal"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Forms.StealReportActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/activity_steal_report"
+            android:parentActivityName=".Activities.StealActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.StealActivity" />
+        </activity>
+        <activity
+            android:name=".Forms.HSEActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="HSE"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Forms.CPSActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/cps"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Forms.SoilActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/btn_soil"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.TutorialActivity"
+            android:label="@string/btn_tutorial"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.InfoActivity"
+            android:label="@string/layerInfo"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+
+        <service
+            android:name=".Services.LocationService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.SyncService"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".Services.SyncAlarm"
+            android:process=":remote" />
+        <receiver
+            android:name=".Services.LocationAlarm"
+            android:process=":remote" />
+        <receiver
+            android:name=".Services.StartupAlarm"
+            android:label="StartupService">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

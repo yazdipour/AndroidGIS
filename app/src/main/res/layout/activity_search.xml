@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:textDirection="rtl"
+    tools:context=".Activities.SearchActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:id="@+id/CmbToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start" />
+
+            <ImageButton
+                android:id="@+id/search_refresh_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="2dp"
+                android:background="#00000000"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                app:srcCompat="@drawable/ic_sync_black_24dp"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="4dp">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp">
+
+        </android.support.v7.widget.SearchView>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/coordinate_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/search_coordinate_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_search_white_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <AutoCompleteTextView
+            android:id="@+id/y_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Y"
+            android:inputType="numberDecimal" />
+
+        <AutoCompleteTextView
+            android:id="@+id/x_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="X"
+            android:inputType="numberDecimal" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/search_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+</LinearLayout>

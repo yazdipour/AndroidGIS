@@ -1,0 +1,223 @@
+[
+  {
+    "id": 0,
+    "url": "iran.map",
+    "type": "base",
+    "enable": true,
+    "title": "ایران وکتور",
+    "access_name": "allow",
+    "visibility": "invisible"
+  },
+  {
+    "id": 1,
+    "url": "GoogleTerrain.mbtiles",
+    "type": "base",
+    "title": "ماهواره ای",
+    "access_name": "allow",
+    "visibility": "invisible"
+  },
+  {
+    "id": 2,
+    "url": "tehranmapsroad.mbtiles",
+    "type": "base",
+    "title": "معابر",
+    "access_name": "allow",
+    "visibility": "invisible"
+  },
+  {
+    "id": 7,
+    "url": "/geoserver/gwc/service/tms/1.0.0/gas:GasNet_zone@EPSG:900913@png/",
+    "tile_path": "{Z}/{X}/{Y}.png",
+    "read_only": true,
+    "formatter": "wms",
+    "title": "مناطق گاز",
+    "access_name": "GasNet_zone",
+    "min_zoom": 14,
+    "max_zoom": 26
+  },
+  {
+    "id": 6,
+    "url": "/geoserver/gwc/service/tms/1.0.0/gas:GasNet_block@EPSG:900913@png/",
+    "tile_path": "{Z}/{X}/{Y}.png",
+    "read_only": true,
+    "formatter": "wms",
+    "title": "بلوک شهری",
+    "access_name": "GasNet_block",
+    "min_zoom": 14,
+    "max_zoom": 26
+  },
+  {
+    "id": 14,
+    "url": "/geoserver/gwc/service/tms/1.0.0/gas:GasNet_parcel@EPSG:900913@png/",
+    "tile_path": "{Z}/{X}/{Y}.png",
+    "read_only": true,
+    "formatter": "wms",
+    "title": "پارسل شهری",
+    "access_name": "GasNet_parcel",
+    "min_zoom": 16,
+    "max_zoom": 18
+  },
+  {
+    "id": 13,
+    "url": "/geoserver/gwc/service/tms/1.0.0/gas:GasNet_pg_gaspipe@EPSG:900913@png/",
+    "tile_path": "{Z}/{X}/{Y}.png",
+    "read_only": true,
+    "title": "لوله توزیع",
+    "access_name": "GasNet_pg_gaspipe",
+    "min_zoom": 14,
+    "max_zoom": 26
+  },
+  {
+    "id": 3,
+    "url": "/geoserver/gwc/service/tms/1.0.0/gas:GasNet_bg_gaspipe@EPSG:900913@png/",
+    "tile_path": "{Z}/{X}/{Y}.png",
+    "read_only": true,
+    "enable": false,
+    "title": "لوله تغذیه",
+    "access_name": "GasNet_bg_gaspipe",
+    "min_zoom": 14,
+    "max_zoom": 26
+  },
+  {
+    "id": 4,
+    "url": "/geoserver/gwc/service/tms/1.0.0/gas:GasNet_bg_point@EPSG:900913@png/",
+    "tile_path": "{Z}/{X}/{Y}.png",
+    "read_only": true,
+    "access_name": "GasNet_bg_point",
+    "title": "نقطه تغذیه",
+    "min_zoom": 14,
+    "max_zoom": 26
+  },
+  {
+    "id": 5,
+    "url": "/geoserver/gwc/service/tms/1.0.0/gas:GasNet_bg_valve@EPSG:900913@png/",
+    "tile_path": "{Z}/{X}/{Y}.png",
+    "read_only": true,
+    "access_name": "GasNet_bg_valve",
+    "title": "شیر تغذیه",
+    "min_zoom": 14,
+    "max_zoom": 26
+  },
+  {
+    "id": 12,
+    "url": "/geoserver/gwc/service/tms/1.0.0/gas:GasNet_pg_point@EPSG:900913@png/",
+    "tile_path": "{Z}/{X}/{Y}.png",
+    "read_only": true,
+    "title": "نقطه توزیع",
+    "access_name": "GasNet_pg_point",
+    "min_zoom": 14,
+    "max_zoom": 26
+  },
+  {
+    "id": 11,
+    "url": "/geoserver/gwc/service/tms/1.0.0/gas:GasNet_pg_valve@EPSG:900913@png/",
+    "tile_path": "{Z}/{X}/{Y}.png",
+    "read_only": true,
+    "title": "شیر توزیع",
+    "access_name": "GasNet_pg_valve",
+    "min_zoom": 14,
+    "max_zoom": 26
+  },
+  {
+    "id": 9,
+    "url": "/geoserver/gwc/service/tms/1.0.0/gas:GasNet_pt@EPSG:900913@png/",
+    "tile_path": "{Z}/{X}/{Y}.png",
+    "read_only": true,
+    "title": "پرژنتی",
+    "access_name": "GasNet_pt",
+    "min_zoom": 14,
+    "max_zoom": 26
+  },
+  {
+    "id": 8,
+    "url": "/geoserver/gwc/service/tms/1.0.0/gas:GasNet_serviceriser@EPSG:900913@png/",
+    "tile_path": "{Z}/{X}/{Y}.png",
+    "read_only": true,
+    "title": "علمک",
+    "access_name": "GasNet_serviceriser",
+    "min_zoom": 14,
+    "max_zoom": 26
+  },
+  {
+    "id": 18,
+    "url": "gfp_offline.sqlite",
+    "title": "پارسل",
+    "type": "parcel",
+    "access_name": "GasNet_parcel",
+    "read_only": true,
+    "min_zoom": 15,
+    "max_zoom": 16
+  },
+  {
+    "id": 16,
+    "url": "gfp_offline.sqlite",
+    "title": "شبکه توزیع",
+    "type": "pg_pipe",
+    "read_only": true,
+    "access_name": "GasNet_pg_gaspipe",
+    "min_zoom": 2,
+    "max_zoom": 18
+  },
+  {
+    "id": 17,
+    "url": "gfp_offline.sqlite",
+    "title": "لوله تغذیه",
+    "type": "bg_pipe",
+    "access_name": "GasNet_bg_gaspipe",
+    "read_only": true,
+    "min_zoom": 2,
+    "max_zoom": 18
+  },
+  {
+    "id": 15,
+    "url": "gfp_offline.sqlite",
+    "type": "pg_point",
+    "title": "نقطه توزیع",
+    "read_only": true,
+    "access_name": "GasNet_pg_point",
+    "min_zoom": 2,
+    "max_zoom": 18
+  },
+  {
+    "id": 23,
+    "url": "gfp_offline.sqlite",
+    "title": "علمک",
+    "access_name": "GasNet_serviceriser",
+    "type": "riser",
+    "read_only": true,
+    "min_zoom": 2,
+    "max_zoom": 17
+  },
+  {
+    "id": 19,
+    "title": "EIS_AREA",
+    "access_name": "GasNet_eis",
+    "type": "eis",
+    "read_only": true,
+    "visibility": "invisible"
+  },
+  {
+    "id": 20,
+    "title": "EIS_VALVE",
+    "access_name": "GasNet_eis",
+    "type": "eis",
+    "read_only": true,
+    "visibility": "invisible"
+  },
+  {
+    "id": 21,
+    "title": "EIS_RISER",
+    "access_name": "GasNet_eis",
+    "type": "eis",
+    "read_only": true,
+    "visibility": "invisible"
+  },
+  {
+    "id": 22,
+    "title": "EIS_PARCEL",
+    "access_name": "GasNet_eis",
+    "type": "eis",
+    "read_only": true,
+    "visibility": "invisible"
+  }
+]

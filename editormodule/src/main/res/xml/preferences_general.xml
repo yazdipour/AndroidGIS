@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Project:  NextGIS Mobile
+  ~ Purpose:  Mobile GIS for Android.
+  ~ Author:   Dmitry Baryshnikov (aka Bishop), bishop.dev@gmail.com
+  ~ Author:   NikitaFeodonit, nfeodonit@yandex.com
+  ~ Author:   Stanislav Petriakov, becomeglory@gmail.com
+  ~ ******************************************************************************
+  ~ Copyright (c) 2012-2016 NextGIS, info@nextgis.com
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<PreferenceCategory android:title="@string/interface_title">-->
+        <!--<ListPreference-->
+            <!--android:defaultValue="light"-->
+            <!--android:entries="@array/theme"-->
+            <!--android:entryValues="@array/theme_val"-->
+            <!--android:key="theme"-->
+            <!--android:title="@string/theme"/>-->
+        <!--<CheckBoxPreference-->
+            <!--android:defaultValue="false"-->
+            <!--android:key="show_sync"-->
+            <!--android:title="@string/pref_sync_notification"/>-->
+        <!--<Preference-->
+            <!--android:key="reset_settings"-->
+            <!--android:title="@string/reset_settings"/>-->
+        <!--<CheckBoxPreference-->
+            <!--android:defaultValue="true"-->
+            <!--android:key="ga_enabled"-->
+            <!--android:summary="@string/pref_ga_sum"-->
+            <!--android:title="@string/pref_ga"/>-->
+    <!--</PreferenceCategory>-->
+
+    <PreferenceCategory android:title="@string/compass_title">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="compass_true_north"
+            android:title="@string/compass_true_north"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="compass_show_magnetic"
+            android:title="@string/compass_magnetic"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="compass_vibration"
+            android:title="@string/compass_vibrate"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="compass_wake_lock"
+            android:title="@string/compass_keep_screen"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

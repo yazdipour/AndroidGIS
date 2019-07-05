@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Project:  NextGIS Mobile
+  ~ Purpose:  Mobile GIS for Android.
+  ~ Author:   Dmitry Baryshnikov (aka Bishop), bishop.dev@gmail.com
+  ~ Author:   NikitaFeodonit, nfeodonit@yandex.com
+  ~ Author:   Stanislav Petriakov, becomeglory@gmail.com
+  ~ ******************************************************************************
+  ~ Copyright (c) 2012-2016 NextGIS, info@nextgis.com
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Lesser Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU Lesser Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Lesser Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="?attr/dialogPreferredPadding"
+            android:paddingRight="?attr/dialogPreferredPadding">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/layer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/layer_name"
+            android:inputType="text"
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/layer_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/layer_url"
+            android:inputType="textUri"/>
+
+        <TextView
+            android:id="@+id/layer_url_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/layer_url_hint"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/layer_type_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="?attr/colorPrimary"
+            android:padding="2dp"
+            android:text="@string/layer_type_optional"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="?android:attr/textColorPrimary"/>
+
+        <Spinner
+            android:id="@+id/layer_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/layer_type"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="?attr/colorPrimary"
+            android:padding="2dp"
+            android:text="@string/tms_layer_cache_size"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="?android:attr/textColorPrimary"/>
+
+        <Spinner
+            android:id="@+id/layer_cache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/tms_tile_cache_size"
+            android:entryValues="@array/tms_tile_cache_size_val"
+            android:prompt="@string/layer_type"/>
+
+        <TextView
+            android:id="@+id/auth_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="?attr/colorPrimary"
+            android:padding="2dp"
+            android:text="@string/credentials_opt"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="?android:attr/textColorPrimary"/>
+
+        <EditText
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/user_name"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Project:  NextGIS Mobile
+  ~ Purpose:  Mobile GIS for Android.
+  ~ Author:   Dmitry Baryshnikov (aka Bishop), bishop.dev@gmail.com
+  ~ Author:   NikitaFeodonit, nfeodonit@yandex.com
+  ~ Author:   Stanislav Petriakov, becomeglory@gmail.com
+  ~ ******************************************************************************
+  ~ Copyright (c) 2012-2016, 2018 NextGIS, info@nextgis.com
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/maprl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_compass"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="?attr/actionBarSize" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_ruler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            fab:fab_addButtonColorNormal="?attr/colorPrimary"
+            fab:fab_addButtonColorPressed="?attr/colorAccent"
+            fab:fab_addButtonPlusIconColor="@android:color/white"
+            fab:fab_icon="@drawable/ic_ruler"
+            fab:fab_size="mini" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_attributes"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="?attr/actionBarSize" />
+
+    <FrameLayout
+        android:id="@+id/fl_status_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_ruler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fl_status_panel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_ruler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_ruler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_zoom_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fl_status_panel"
+        android:layout_margin="8dp"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_zoom_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_addButtonColorNormal="?attr/colorPrimary"
+            fab:fab_addButtonColorPressed="?attr/colorAccent"
+            fab:fab_addButtonPlusIconColor="#fff"
+            fab:fab_icon="@drawable/ic_plus"
+            fab:fab_size="mini" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_zoom_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_addButtonColorNormal="?attr/colorPrimary"
+            fab:fab_addButtonColorPressed="?attr/colorAccent"
+            fab:fab_icon="@drawable/ic_minus"
+            fab:fab_size="mini" />
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_point_by_tap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fl_status_panel"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"
+        fab:fab_addButtonColorNormal="@color/colorAccent"
+        fab:fab_addButtonColorPressed="@color/colorAccent"
+        fab:fab_icon="@drawable/ic_action_add_point" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fl_status_panel"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        fab:fab_addButtonColorNormal="?attr/colorPrimary"
+        fab:fab_addButtonColorPressed="?attr/colorAccent"
+        fab:fab_addButtonPlusIconColor="#fff"
+        android:visibility="gone"
+        fab:fab_labelStyle="@style/fab_labels_style">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_geometry_by_walk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="?attr/colorPrimary"
+            fab:fab_colorPressed="?attr/colorAccent"
+            fab:fab_icon="@drawable/ic_action_maps_directions_walk"
+            fab:fab_size="mini"
+            fab:fab_title="افزودن عارضه با راه رفتن" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_new_geometry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="?attr/colorPrimary"
+            fab:fab_colorPressed="?attr/colorAccent"
+            fab:fab_icon="@drawable/ic_action_edit_light"
+            fab:fab_size="mini"
+            android:visibility="gone"
+            fab:fab_title="افزودن عارضه" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_current_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="?attr/colorPrimary"
+            fab:fab_colorPressed="?attr/colorAccent"
+            fab:fab_icon="@drawable/ic_action_maps_place"
+            fab:fab_size="mini"
+            fab:fab_title="افزودن عارضه با موقعیت" />
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</RelativeLayout>

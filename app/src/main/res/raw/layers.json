@@ -1,0 +1,229 @@
+[
+  {
+    "id": 0,
+    "url": "iran.map",
+    "type": "base",
+    "enable": true,
+    "title": "OSM ",
+    "access_name": "allow",
+    "visibility": "invisible"
+  },
+  {
+    "id": 1,
+    "url": "tehranmapsroad.mbtiles",
+    "type": "base",
+    "title": "Google",
+    "access_name": "allow",
+    "visibility": "invisible"
+  },
+  {
+    "id": 2,
+    "url": "/geosuite/api/mbtile_mobile/sattlite/",
+    "tile_path": "{Z}/{X}/{Y}",
+    "type": "base",
+    "title": "Google Satellite",
+    "access_name": "allow",
+    "visibility": "invisible",
+    "formatter": "tms"
+  },
+  {
+    "id": 3,
+    "url": "/geosuite/api/mbtile_mobile/road/",
+    "tile_path": "{Z}/{X}/{Y}",
+    "type": "base",
+    "title": "Google Roads",
+    "access_name": "allow",
+    "visibility": "invisible",
+    "formatter": "tms"
+  },
+  {
+    "id": 10,
+    "url": "/geoserver/gas/wms?SERVICE=WMS&VERSION=1.1.1&FORMAT_OPTIONS=dpi:180&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS={LAYERS}",
+    "tile_path": "&BBOX={1},{2},{3},{4}",
+    "read_only": true,
+    "title": "مناطق گاز",
+    "formatter": "wms",
+    "access_name": "GasNet_zone"
+  },
+  {
+    "id": 11,
+    "url": "/geoserver/gas/wms?SERVICE=WMS&VERSION=1.1.1&FORMAT_OPTIONS=dpi:180&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS={LAYERS}",
+    "tile_path": "&BBOX={1},{2},{3},{4}",
+    "read_only": true,
+    "formatter": "wms",
+    "title": "بلوک شهری",
+    "access_name": "GasNet_block"
+  },
+  {
+    "id": 12,
+    "url": "/geoserver/gas/wms?SERVICE=WMS&VERSION=1.1.1&FORMAT_OPTIONS=dpi:180&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS={LAYERS}",
+    "tile_path": "&BBOX={1},{2},{3},{4}",
+    "formatter": "wms",
+    "title": "پارسل",
+    "access_name": "GasNet_parcel",
+    "read_only": true
+  },
+  {
+    "id": 13,
+    "url": "/geoserver/gas/wms?SERVICE=WMS&VERSION=1.1.1&FORMAT_OPTIONS=dpi:180&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS={LAYERS}",
+    "tile_path": "&BBOX={1},{2},{3},{4}",
+    "formatter": "wms",
+    "access_name": "GasNet_area_station",
+    "title": "ایستگاه",
+    "read_only": true
+  },
+  {
+    "id": 14,
+    "url": "/geoserver/gas/wms?SERVICE=WMS&VERSION=1.1.1&FORMAT_OPTIONS=dpi:180&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS={LAYERS}",
+    "tile_path": "&BBOX={1},{2},{3},{4}",
+    "read_only": true,
+    "formatter": "wms",
+    "title": "لوله توزیع",
+    "access_name": "GasNet_pg_gaspipe"
+  },
+  {
+    "id": 15,
+    "url": "/geoserver/gas/wms?SERVICE=WMS&VERSION=1.1.1&FORMAT_OPTIONS=dpi:180&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS={LAYERS}",
+    "tile_path": "&BBOX={1},{2},{3},{4}",
+    "formatter": "wms",
+    "read_only": true,
+    "access_name": "GasNet_bg_gaspipe",
+    "title": "لوله تغذیه"
+  },
+  {
+    "id": 16,
+    "url": "/geoserver/gas/wms?SERVICE=WMS&VERSION=1.1.1&FORMAT_OPTIONS=dpi:180&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS={LAYERS}",
+    "tile_path": "&BBOX={1},{2},{3},{4}",
+    "read_only": true,
+    "access_name": "GasNet_bg_point",
+    "formatter": "wms",
+    "title": "نقطه تغذیه"
+  },
+  {
+    "id": 17,
+    "url": "/geoserver/gas/wms?SERVICE=WMS&VERSION=1.1.1&FORMAT_OPTIONS=dpi:180&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS={LAYERS}",
+    "tile_path": "&BBOX={1},{2},{3},{4}",
+    "formatter": "wms",
+    "read_only": true,
+    "access_name": "GasNet_bg_valve",
+    "title": "شیر تغذیه"
+  },
+  {
+    "id": 18,
+    "url": "/geoserver/gas/wms?SERVICE=WMS&VERSION=1.1.1&FORMAT_OPTIONS=dpi:180&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS={LAYERS}",
+    "tile_path": "&BBOX={1},{2},{3},{4}",
+    "read_only": true,
+    "title": "نقطه توزیع",
+    "formatter": "wms",
+    "access_name": "GasNet_pg_point"
+  },
+  {
+    "id": 19,
+    "url": "/geoserver/gas/wms?SERVICE=WMS&VERSION=1.1.1&FORMAT_OPTIONS=dpi:180&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS={LAYERS}",
+    "tile_path": "&BBOX={1},{2},{3},{4}",
+    "read_only": true,
+    "title": "شیر توزیع",
+    "access_name": "GasNet_pg_valve",
+    "formatter": "wms"
+  },
+  {
+    "id": 20,
+    "url": "/geoserver/gas/wms?SERVICE=WMS&VERSION=1.1.1&FORMAT_OPTIONS=dpi:180&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS={LAYERS}",
+    "tile_path": "&BBOX={1},{2},{3},{4}",
+    "formatter": "wms",
+    "read_only": true,
+    "title": "پرژنتی",
+    "access_name": "GasNet_pt"
+  },
+  {
+    "id": 21,
+    "url": "/geoserver/gas/wms?SERVICE=WMS&VERSION=1.1.1&FORMAT_OPTIONS=dpi:180&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&LAYERS={LAYERS}",
+    "tile_path": "&BBOX={1},{2},{3},{4}",
+    "read_only": true,
+    "formatter": "wms",
+    "title": "علمک",
+    "access_name": "GasNet_serviceriser"
+  },
+  {
+    "id": 301,
+    "url": "gfp_offline.sqlite",
+    "title": "پارسل",
+    "type": "parcel",
+    "access_name": "GasNet_parcel",
+    "read_only": true,
+    "min_zoom": 15,
+    "max_zoom": 16
+  },
+  {
+    "id": 302,
+    "url": "gfp_offline.sqlite",
+    "title": "شبکه توزیع",
+    "type": "pg_pipe",
+    "read_only": true,
+    "access_name": "GasNet_pg_gaspipe",
+    "min_zoom": 2,
+    "max_zoom": 18
+  },
+  {
+    "id": 303,
+    "url": "gfp_offline.sqlite",
+    "title": "لوله تغذیه",
+    "type": "bg_pipe",
+    "access_name": "GasNet_bg_gaspipe",
+    "read_only": true,
+    "min_zoom": 2,
+    "max_zoom": 18
+  },
+  {
+    "id": 304,
+    "url": "gfp_offline.sqlite",
+    "type": "pg_point",
+    "title": "نقطه توزیع",
+    "read_only": true,
+    "access_name": "GasNet_pg_point",
+    "min_zoom": 2,
+    "max_zoom": 18
+  },
+  {
+    "id": 305,
+    "url": "gfp_offline.sqlite",
+    "title": "علمک",
+    "access_name": "GasNet_serviceriser",
+    "type": "riser",
+    "read_only": true,
+    "min_zoom": 2,
+    "max_zoom": 17
+  },
+  {
+    "id": 200,
+    "title": "EIS_AREA",
+    "access_name": "GasNet_eis",
+    "type": "eis",
+    "read_only": true,
+    "visibility": "invisible"
+  },
+  {
+    "id": 201,
+    "title": "EIS_VALVE",
+    "access_name": "GasNet_eis",
+    "type": "eis",
+    "read_only": true,
+    "visibility": "invisible"
+  },
+  {
+    "id": 202,
+    "title": "EIS_RISER",
+    "access_name": "GasNet_eis",
+    "type": "eis",
+    "read_only": true,
+    "visibility": "invisible"
+  },
+  {
+    "id": 203,
+    "title": "EIS_PARCEL",
+    "access_name": "GasNet_eis",
+    "type": "eis",
+    "read_only": true,
+    "visibility": "invisible"
+  }
+]

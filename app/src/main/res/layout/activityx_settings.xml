@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".Activities.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/user_info1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/user_info2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/user_info3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/blue_rounded_button"
+            android:backgroundTint="#ff0000"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="خروج از حساب کاربری"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="محل ماموریت: " />
+
+            <Spinner
+                android:id="@+id/spinner_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/switch_rotate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="همیشه رو به شمال - قفل چرخش" />
+
+        <Switch
+            android:id="@+id/switch_tilt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="حالت سه بعدی" />
+
+        <Switch
+            android:id="@+id/switch_online"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/sw_online" />
+
+        <Switch
+            android:id="@+id/switch_cathode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            android:text="@string/cathode" />
+
+        <Switch
+            android:id="@+id/switch_hse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            android:text="HSE" />
+        <!--ZOOM LEVEL-->
+        <LinearLayout
+            android:id="@+id/layer_more1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="TimeOut" />
+
+            <com.travijuu.numberpicker.library.NumberPicker
+                android:id="@+id/number_picker_timeout"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                app:focusable="false"
+                app:max="360"
+                app:min="60"
+                app:unit="10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layer_more2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="SyncService" />
+
+            <com.travijuu.numberpicker.library.NumberPicker
+                android:id="@+id/number_picker_service"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                app:focusable="false"
+                app:max="600"
+                app:min="60"
+                app:unit="10" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Zoom Level"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="8dp"
+            app:corner_radius="10"
+            app:data_type="_integer"
+            app:max_value="30"
+            app:min_value="7" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/textMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/textMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="100" />
+        </FrameLayout>
+        <!--END ZOOM LEVEL-->
+
+        <!--IP-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Map IP"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/ip_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:textAlignment="center"
+            android:textDirection="ltr" />
+        <!--END IP-->
+        <!--IP-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Server IP"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ip_server_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:textAlignment="center"
+            android:textDirection="ltr"
+            tools:ignore="LabelFor,TextFields" />
+        <!--END IP-->
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <Button
+            android:id="@+id/btn_subsetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/blue_rounded_button"
+            android:backgroundTint="#444"
+            android:drawableStart="@drawable/ic_settings_black_24dp"
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:visibility="gone"
+            android:text="@string/btn_editor_settings"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_downloader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/blue_rounded_button"
+            android:backgroundTint="#222"
+            android:drawableStart="@drawable/world_color"
+            android:drawablePadding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/btn_downloader"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_folder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/blue_rounded_button"
+            android:backgroundTint="#222"
+            android:drawableStart="@drawable/ic_folder"
+            android:drawablePadding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/open_folder"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_tutorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/blue_rounded_button"
+            android:backgroundTint="@color/cfdialog_neutral_button_color"
+            android:drawableStart="@drawable/ic_ondemand_video_black_24dp"
+            android:drawablePadding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/btn_tutorial"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/blue_rounded_button"
+            android:backgroundTint="#27ae60"
+            android:text="@string/btn_save"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_hidden"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@color/float_transparent" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/blue_rounded_button"
+            android:backgroundTint="#ff0000"
+            android:drawableStart="@drawable/ic_action_warning_dark"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/btn_clear_cache"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

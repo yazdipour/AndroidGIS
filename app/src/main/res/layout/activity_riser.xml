@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Forms.RiserActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:hint="کد علمک"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/qr_code"
+            android:drawableTint="@color/black"
+            android:text="اسکن" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/blue_rounded_button"
+        android:backgroundTint="#27ae60"
+        android:text="@string/btn_save"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:textStyle="bold" />
+</LinearLayout>
